@@ -1,15 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { InputForm } from './InputForm.tsx';
 
 function App() {
 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      
         <button onClick={() => alert("hello react")}>ClickMe!</button>
         <a href='https://github.com/Janek9709/React-kurs'>LinkDoRepo</a>
-      </header>
+
+
+        <header className='App-header'>
+            <InputForm defaultValue={'hello form'} />
+        </header>
+
+
     </div>
   );
 }
