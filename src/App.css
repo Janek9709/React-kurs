@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -28,11 +29,72 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+a{
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+}
+
+a:hover{
+  color: grey;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #adc6f8;
+  min-height: 40px;
+  margin-bottom: 5rem;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style:none;
+}
+
+#Btn-toggle{
+  display: none;
+}
+
+input, button{
+  width: 40%;
+  align-self: center;
+}
+
+
+@media screen and (max-width:600px) {
+  .nav ul{
+    display: none;
+    flex-direction: column;
+    /* width: 100%; */
+    text-align: start;
+    padding: 0;
+    text-align: center;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  a:hover{
+    background-color: #ddd;
+    margin: 0;
+    width: 100%;
   }
+
+  .nav{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #Btn-toggle{
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+
 }

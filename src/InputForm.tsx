@@ -1,4 +1,5 @@
 import {useState, useEffect, useCallback } from 'react';
+import './App.css';
 
 interface InputFormProps{
     defaultValue? : string;
@@ -43,17 +44,17 @@ export const InputForm  = (props? : InputFormProps) => {
     }, [inputValue])
 
 
-    useEffect(() => {
-        let valueToSet = '';
-        const localStorageData = localStorage.getItem(storageFormKey)
-        if(!!localStorageData) {
-            valueToSet = localStorageData;
-        } else {
-            if (!!props?.defaultValue){
-                valueToSet = props?.defaultValue;
-            }
-        }
-    })
+    // useEffect(() => {
+    //     let valueToSet;
+    //     const localStorageData = localStorage.getItem(storageFormKey)
+    //     if(!!localStorageData) {
+    //         valueToSet = localStorageData;
+    //     } else {
+    //         if (!!props?.defaultValue){
+    //             valueToSet = props?.defaultValue;
+    //         }
+    //     }
+    // })
 
     return (
         <div style={{display:"flex", flexDirection: "column"}}>
